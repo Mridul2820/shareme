@@ -25,6 +25,7 @@ const Home = () => {
         client.fetch(query).then((data) => {
             setUser(data[0]);
         });
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
@@ -52,7 +53,7 @@ const Home = () => {
                             className="w-28" 
                         />
                     </Link>
-                    <Link to={`user/${user?.id}`}>
+                    <Link to={`user/${user?._id}`}>
                         {user?.image ? 
                             <img 
                                 src={user?.image} 
