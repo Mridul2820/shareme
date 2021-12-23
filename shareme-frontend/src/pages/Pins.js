@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import PinDetail from '../components/PinDetail'
-import Search from '../components/Search'
+import PinDetail from './PinDetail'
+import Search from './Search'
 import CreatePin from './CreatePin'
 import Feed from './Feed'
 

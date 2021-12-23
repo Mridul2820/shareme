@@ -20,8 +20,6 @@ const CreatePin = ({ user }) => {
 
     const navigate = useNavigate();
 
-    console.log(user);
-
     const uploadImage = (e) => {
         const selectedFile = e.target.files[0];
         // uploading asset to sanity
