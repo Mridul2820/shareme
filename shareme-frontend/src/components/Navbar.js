@@ -24,6 +24,9 @@ const Navbar = ({ user, searchTerm, setSearchTerm }) => {
                 />
             </div>
             <div className="flex gap-2">
+                <Link to="/pin-create" className="bg-black text-white rounded-lg w-12 h-12 md:w-14 md:h-12 flex justify-center items-center">
+                    <IoMdAdd />
+                </Link>
                 <Link 
                     to={`/user/${user?._id}`}
                     className="hidden md:block"
@@ -33,10 +36,7 @@ const Navbar = ({ user, searchTerm, setSearchTerm }) => {
                         alt={user?.username} 
                         className="w-14 h-12 rounded-lg"
                     />
-                </Link>'
-                <Link to="/pin-create" className="bg-black text-white rounded-lg w-12 h-12 md:w-14 md:h-12 flex justify-center items-center">
-                    <IoMdAdd />
-                </Link>'
+                </Link>
             </div>
         </div>
     )
