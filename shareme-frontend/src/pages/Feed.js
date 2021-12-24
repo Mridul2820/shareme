@@ -13,7 +13,7 @@ const Feed = () => {
     const { categoryId } = useParams()
 
     useEffect(() => {
-        document.title = `${categoryId ? categoryId + ' - ' : ''} ShareMe`
+        document.title = `${categoryId ? categoryId.slice(0, 1).toUpperCase() + categoryId.slice(1) + ' - ' : ''} ShareMe`
     }, [categoryId])
     
     useEffect(() => {
