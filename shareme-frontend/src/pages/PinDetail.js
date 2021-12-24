@@ -33,6 +33,10 @@ const PinDetail = ({ user }) => {
             });
         }
     };
+
+    useEffect(() => {
+        document.title = `${pinDetail !== null ? pinDetail?.title + ' - ' : ''} ShareMe`
+    }, [pinDetail])
     
     useEffect(() => {
         fetchPinDetails();

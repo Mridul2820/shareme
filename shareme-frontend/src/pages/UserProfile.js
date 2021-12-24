@@ -24,6 +24,10 @@ const UserProfile = () => {
     const notActiveBtnStyles = 'bg-primary mr-4 text-black font-bold p-2 rounded-full w-20 outline-none';
 
     useEffect(() => {
+        document.title = `${user !== null ? user?.userName + ' - ' : ''} ShareMe`
+    }, [user])
+
+    useEffect(() => {
         const query = userQuery(userId);
         client.fetch(query).then((data) => {
             setUser(data[0]);

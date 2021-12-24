@@ -11,6 +11,10 @@ const Feed = () => {
     const [pins, setPins] = useState()
     const [loading, setLoading] = useState(false)
     const { categoryId } = useParams()
+
+    useEffect(() => {
+        document.title = `${categoryId ? categoryId + ' - ' : ''} ShareMe`
+    }, [categoryId])
     
     useEffect(() => {
         if(categoryId){

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineCloudUpload } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
@@ -19,6 +19,10 @@ const CreatePin = ({ user }) => {
     const [wrongImageType, setWrongImageType] = useState(false)
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = 'Create Pin - ShareMe'
+    }, [])
 
     const uploadImage = (e) => {
         const selectedFile = e.target.files[0];

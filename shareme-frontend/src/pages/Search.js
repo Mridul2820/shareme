@@ -10,6 +10,10 @@ const Search = ({ searchTerm }) => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        document.title = 'Search - ShareMe'
+    }, [])
+
+    useEffect(() => {
         if (searchTerm !== '') {
             setLoading(true);
             const query = searchQuery(searchTerm.toLowerCase());

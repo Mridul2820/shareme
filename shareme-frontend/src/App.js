@@ -10,6 +10,7 @@ const App = () => {
         const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
     
         if (!User) navigate('/login');
+        // eslint-disable-next-line
     }, []);
 
     return (
